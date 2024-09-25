@@ -264,11 +264,10 @@ header {
 }
 @media (min-width: 1024px) {
   .section-page .section-contents {
-    padding: 10%;
+    padding: 8%;
   }
 }
 .section-page .section-contents__header {
-  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -345,7 +344,7 @@ header {
 }
 @media (min-width: 1024px) {
   .card-exp__title h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 .card-exp__title p {
