@@ -20,7 +20,7 @@ $shadow-color: #888888;
   &--sm {
     width: 10px;
     height: 10px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
   }
 }
 header {
@@ -280,10 +280,6 @@ header {
         @include tablet {
           font-size: 1.5rem;
         }
-
-        @include desktop {
-          font-size: 2rem;
-        }
       }
     }
 
@@ -369,6 +365,7 @@ header {
     gap: 0.5rem;
     color: $blue-0050ff;
     font-size: 1rem;
+    margin-bottom: 0.5rem;
     @include tablet {
       font-size: 1.25rem;
     }

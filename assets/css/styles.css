@@ -6,7 +6,7 @@
 .dot-base--sm {
   width: 10px;
   height: 10px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 }
 
 header {
@@ -294,11 +294,6 @@ header {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 1024px) {
-  .section-page .section-contents__header h1 {
-    font-size: 2rem;
-  }
-}
 .section-page .section-contents__body {
   width: 100%;
 }
@@ -384,6 +379,7 @@ header {
   gap: 0.5rem;
   color: #0050ff;
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .skill-item__title {
