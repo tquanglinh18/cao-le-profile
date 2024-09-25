@@ -111,7 +111,7 @@ header {
 
 .user-card {
   width: 100%;
-  max-width: 678px;
+  max-width: 768px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -300,6 +300,7 @@ header {
 
 .card-exp {
   width: 100%;
+  max-width: 768px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   background-color: white;
   padding: 6%;
@@ -330,15 +331,28 @@ header {
 .card-exp__title h1 {
   color: #0050ff;
   margin-bottom: 0.25rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+@media (min-width: 1024px) {
+  .card-exp__title h1 {
+    font-size: 1.5rem;
+  }
 }
 .card-exp__title h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
 @media (min-width: 1024px) {
   .card-exp__title h3 {
+    font-size: 1.25rem;
+  }
+}
+.card-exp__title p {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .card-exp__title p {
     font-size: 1rem;
   }
 }
@@ -358,6 +372,12 @@ header {
 }
 .card-exp__desc p {
   margin-bottom: 1rem;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .card-exp__desc p {
+    font-size: 16px;
+  }
 }
 .card-exp__desc p b {
   text-transform: uppercase;

@@ -106,7 +106,7 @@ header {
 
 .user-card {
   width: 100%;
-  max-width: 678px;
+  max-width: 768px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -290,6 +290,7 @@ header {
 }
 .card-exp {
   width: 100%;
+  max-width: 768px;
   box-shadow: 0 1px 4px #0009;
   background-color: white;
   padding: 6%;
@@ -315,15 +316,26 @@ header {
     h1 {
       color: $blue-0050ff;
       margin-bottom: 0.25rem;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      @include desktop {
+        font-size: 1.5rem;
+      }
     }
 
     h3 {
-      font-size: 1.25rem;
+      font-size: 1rem;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
 
       @include desktop {
+        font-size: 1.25rem;
+      }
+    }
+
+    p {
+      font-size: 14px;
+
+      @include tablet {
         font-size: 1rem;
       }
     }
@@ -333,6 +345,7 @@ header {
     margin-top: 2rem;
     border-top: 2px solid $shadow-color;
     padding-top: 1rem;
+
     @include tablet {
       width: 55%;
       border-top: none;
@@ -341,6 +354,11 @@ header {
     }
     p {
       margin-bottom: 1rem;
+      font-size: 14px;
+
+      @include tablet {
+        font-size: 16px;
+      }
       b {
         text-transform: uppercase;
       }
