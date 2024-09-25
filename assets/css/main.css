@@ -1,0 +1,84 @@
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 640px) and (orientation: landscape) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1289px) {
+}
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("../fonts/MyriadPro-Regular.eot");
+  src: url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MyriadPro-Regular.woff2") format("woff2"),
+    url("../fonts/MyriadPro-Regular.woff") format("woff"),
+    url("../fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Nolan Next";
+  src: url("../fonts/SVN-NolanNext-Medium.eot");
+  src: url("../fonts/SVN-NolanNext-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/SVN-NolanNext-Medium.woff2") format("woff2"),
+    url("../fonts/SVN-NolanNext-Medium.woff") format("woff"),
+    url("../fonts/SVN-NolanNext-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Nolan Next Extra Bold";
+  src: url("../fonts/SVN-NolanNext-ExtraBold.eot");
+  src: url("../fonts/SVN-NolanNext-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/SVN-NolanNext-ExtraBold.woff2") format("woff2"),
+    url("../fonts/SVN-NolanNext-ExtraBold.woff") format("woff"),
+    url("../fonts/SVN-NolanNext-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "MyriadPro-Regular";
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+b,
+h3 {
+  font-family: "SVN-Nolan Next";
+  font-weight: bold;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-page {
+  max-width: 1200px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none; /* no underline */
+}
+
+html {
+  scroll-behavior: smooth;
+  top: 120px;
+}

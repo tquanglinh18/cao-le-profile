@@ -1,0 +1,463 @@
+@import "responsive";
+
+$blue-0050ff: #0050ff;
+$papayaWhip: #ffefd5;
+$bg-section-color: #f4ece6;
+$shadow-color: #888888;
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot-base {
+  width: 16px;
+  height: 16px;
+  background-color: $blue-0050ff;
+  &--sm {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 1.25rem;
+  }
+}
+header {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 4px 4px 8px 4px $shadow-color;
+  background-color: white;
+}
+.header {
+  width: 100%;
+  padding: 1rem;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 0.25rem;
+    h1 {
+      font-size: 1.25rem;
+
+      @include desktop {
+        font-size: 2rem;
+      }
+    }
+    h3 {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      margin-bottom: 0.25rem;
+    }
+    &--name {
+      @include flex-row-center();
+    }
+  }
+
+  &__action {
+    @include flex-row-center();
+    gap: 1rem;
+    font-size: 0.75rem;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 1rem;
+    }
+    &--item {
+      transition: all 0.3s;
+      &:hover {
+        scale: 1.15;
+        color: $blue-0050ff;
+      }
+    }
+  }
+}
+
+.contents {
+  width: 100%;
+  padding: 2rem 1rem;
+  background: #e6dace;
+  position: relative;
+  @include flex-row-center();
+  @include tablet {
+    background: linear-gradient(to right, #e6dace, #e6dace 50%, #fff 50%, #fff);
+    padding: 4rem 1rem;
+  }
+}
+
+.user-card {
+  width: 100%;
+  max-width: 678px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: $bg-section-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 4px 4px 8px 4px $shadow-color;
+
+    // @include tablet {
+    //   width: 45%;
+    //   max-width: unset;
+    // }
+    .user-info {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--avt {
+        width: 100%;
+        max-width: 205px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }
+      }
+
+      &--name {
+        width: 100%;
+        @include flex-row-center();
+        margin-bottom: 0.5rem;
+
+        h1 {
+          width: fit-content;
+          padding: 1rem 0;
+          text-align: center;
+          font-weight: 900;
+          font-size: 2rem;
+          border-bottom: 2px solid $blue-0050ff;
+        }
+      }
+
+      &--location {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 4px;
+      }
+    }
+
+    &--contact {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: white;
+      @include flex-row-center();
+      gap: 1rem;
+    }
+  }
+
+  &__slogan {
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    @include tablet {
+      width: 45%;
+      max-width: unset;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.contact-item {
+  width: 28px;
+  height: 28px;
+  padding: 0.25rem;
+  transition: all 0.2s;
+  margin-right: 0.5rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    scale: 1.5;
+  }
+}
+
+.section-page {
+  width: 100%;
+  background-color: $bg-section-color;
+  &:nth-child(even) {
+    background-color: white;
+    .card-exp {
+      background-color: $bg-section-color;
+    }
+  }
+  .section-contents {
+    max-width: 1024px;
+    margin: 64px auto;
+    padding: 64px 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @include tablet {
+      margin: 0 auto;
+      padding: 16% 1rem;
+    }
+
+    @include desktop {
+      padding: 10%;
+    }
+
+    &__header {
+      padding: 0 1rem;
+      @include flex-row-center();
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 12px;
+      gap: 1rem;
+      @include tablet {
+        font-size: 1rem;
+        letter-spacing: 4px;
+      }
+
+      h1 {
+        font-size: 1rem;
+
+        @include tablet {
+          font-size: 1.5rem;
+        }
+
+        @include desktop {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__body {
+      width: 100%;
+    }
+  }
+}
+.card-exp {
+  width: 100%;
+  box-shadow: 0 1px 4px #0009;
+  background-color: white;
+  padding: 6%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 3rem;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6% 4%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    width: 100%;
+    @include tablet {
+      width: 40%;
+    }
+    h1 {
+      color: $blue-0050ff;
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+
+      @include desktop {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__desc {
+    width: 100%;
+    margin-top: 2rem;
+    border-top: 2px solid $shadow-color;
+    padding-top: 1rem;
+    @include tablet {
+      width: 55%;
+      border-top: none;
+      padding-top: 0rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      b {
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.skill-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $blue-0050ff;
+    font-size: 1rem;
+    @include tablet {
+      font-size: 1.25rem;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__desc {
+    font-style: italic;
+    font-size: 14px;
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+
+.skill-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: start;
+  align-content: start;
+  gap: 1rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#contacts {
+  box-shadow: 4px 4px 8px 4px $shadow-color;
+  a {
+    &:last-child {
+      .contact-ft {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.section-page {
+    background-color: white;
+  }
+  .section-contents {
+    width: 100%;
+    padding: 10%;
+    margin: 0 auto;
+    @include tablet {
+      padding: 6%;
+    }
+    @include desktop {
+      padding: 4%;
+    }
+    &__header {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+
+  .contact-ft {
+    width: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.25rem 1rem;
+    transition: all 0.3s;
+    &:hover {
+      scale: 1.2;
+    }
+
+    &--icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    &--title {
+      font-size: 1rem;
+      @include tablet {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+#skill {
+  .section-contents {
+    margin: 0 auto;
+  }
+}
